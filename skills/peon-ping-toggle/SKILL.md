@@ -1,12 +1,12 @@
 ---
 name: peon-ping-toggle
-description: Toggle peon-ping sound notifications on/off. Use when user wants to mute, unmute, pause, or resume peon sounds during a Claude Code session. Also handles config changes like volume, pack rotation, categories — any peon-ping setting.
+description: Toggle disruptor-ping sound notifications on/off. Use when user wants to mute, unmute, pause, or resume peon sounds during a Claude Code session. Also handles config changes like volume, pack rotation, categories — any disruptor-ping setting.
 user_invocable: true
 ---
 
 # peon-ping-toggle
 
-Toggle peon-ping sounds on or off. Also handles any peon-ping configuration changes.
+Toggle disruptor-ping sounds on or off. Also handles any disruptor-ping configuration changes.
 
 ## Toggle sounds
 
@@ -26,8 +26,8 @@ if (-not $claudeDir -or $claudeDir -eq "") {
 ```
 
 Report the output to the user. The command will print either:
-- `peon-ping: sounds paused` — sounds are now muted
-- `peon-ping: sounds resumed` — sounds are now active
+- `disruptor-ping: sounds paused` — sounds are now muted
+- `disruptor-ping: sounds resumed` — sounds are now active
 
 ## What This Toggles
 
@@ -40,7 +40,7 @@ This command toggles the **master audio switch** (`enabled` config). When disabl
 
 ## Examples
 
-"Mute peon-ping completely" → Sets `enabled: false`
+"Mute disruptor-ping completely" → Sets `enabled: false`
 "Just disable the popups but keep sounds" → Sets `desktop_notifications: false` (use `/peon-ping-config` instead)
 
 ## Configuration changes

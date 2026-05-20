@@ -1,6 +1,6 @@
 ---
 name: peon-ping-use
-description: Set which voice pack (character voice) plays for the current chat session. Automatically enables session_override rotation mode if not already set. Use when user wants a specific character voice like GLaDOS, Peon, or Kerrigan for this conversation.
+description: Set which voice pack (character voice) plays for the current chat session. Automatically enables session_override rotation mode if not already set. Use when user wants a specific character voice like GLaDOS, Disruptor, or Kerrigan for this conversation.
 user_invocable: true
 license: MIT
 metadata:
@@ -44,10 +44,11 @@ If for some reason the hook doesn't intercept the command, follow these steps:
 ### 1. Parse the pack name
 
 Extract the pack name from the user's request. Common pack names:
-- `peon` — Warcraft Peon
+- `disruptor` — Disruptor, the Stormcrafter (DOTA 2) — default for this fork
 - `glados` — Portal's GLaDOS
 - `sc_kerrigan` — StarCraft Kerrigan
 - `peasant` — Warcraft Peasant
+- `peon` — Warcraft Peon
 - `hk47` — Star Wars HK-47
 
 ### 2. List available packs

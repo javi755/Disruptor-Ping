@@ -1,5 +1,7 @@
-# peon-ping
+# disruptor-ping
 <div align="center">
+
+> 🔱 This is a Disruptor-themed fork of peon-ping. The forecast calls for shipping.
 
 **English** | [한국어](README_ko.md) | [中文](README_zh.md) | [日本語](README_ja.md)
 
@@ -10,7 +12,7 @@
 
 **Game character voice lines + visual overlay notifications when your AI coding agent needs attention — or let the agent pick its own sound via MCP.**
 
-AI coding agents don't notify you when they finish or need permission. You tab away, lose focus, and waste 15 minutes getting back into flow. peon-ping fixes this with voice lines and bold on-screen banners from Warcraft, StarCraft, Portal, Zelda, and more — works with **Claude Code**, **Amp**, **GitHub Copilot**, **Codex**, **Cursor**, **OpenCode**, **Kilo CLI**, **Kiro**, **Kimi Code**, **Windsurf**, **Google Antigravity**, **Rovo Dev CLI**, **DeepAgents**, and any MCP client.
+AI coding agents don't notify you when they finish or need permission. You tab away, lose focus, and waste 15 minutes getting back into flow. disruptor-ping fixes this with Disruptor voice lines ("You've been disrupted", "The forecast calls for victory!", "Rolling thunder!") and bold on-screen banners — works with **Claude Code**, **Amp**, **GitHub Copilot**, **Codex**, **Cursor**, **OpenCode**, **Kilo CLI**, **Kiro**, **Kimi Code**, **Windsurf**, **Google Antigravity**, **Rovo Dev CLI**, **DeepAgents**, and any MCP client.
 
 **See it in action** &rarr; [peonping.com](https://peonping.com/)
 
@@ -46,7 +48,7 @@ AI coding agents don't notify you when they finish or need permission. You tab a
 brew install PeonPing/tap/peon-ping
 ```
 
-Then run `peon-ping-setup` to register hooks and download sound packs. macOS and Linux.
+Then run `peon-ping-setup` to register hooks and download sound packs. macOS and Linux. (Note: this is the upstream installer from PeonPing — disruptor-ping uses the same install toolchain.)
 
 ### Option 2: Installer script (macOS, Linux, WSL2)
 
@@ -54,7 +56,7 @@ Then run `peon-ping-setup` to register hooks and download sound packs. macOS and
 curl -fsSL https://raw.githubusercontent.com/PeonPing/peon-ping/main/install.sh | bash
 ```
 
-⚠️ **WSL2 audio notes.** peon-ping plays audio on the Windows side. On first run it probes your Windows host once (cached per Windows build) to pick the best playback path:
+⚠️ **WSL2 audio notes.** disruptor-ping plays audio on the Windows side. On first run it probes your Windows host once (cached per Windows build) to pick the best playback path:
 
 - On **Windows 10 / Windows 11 pre-24H2**, WPF MediaPlayer is used directly — native MP3 + WAV, no extra dependencies.
 - On **Windows 11 24H2+** (build 26100+), Microsoft removed legacy Windows Media Player from the OS and WPF MediaPlayer fails (`MILAVERR_INVALIDWMPVERSION`). peon-ping falls back to `System.Media.SoundPlayer`, which uses the Win32 `PlaySound` API and works everywhere — but it's WAV-only, so MP3 packs require **ffmpeg** to transcode on the fly:
@@ -234,17 +236,17 @@ For packs listed on [openpeon.com](https://openpeon.com/), find the GitHub repos
 
 | Event | CESP Category | Examples |
 |---|---|---|
-| Session starts | `session.start` | *"Ready to work!"*, *"Something need doing?"* |
-| Task finishes | `task.complete` | *"Work complete."*, *"Work, work."* |
-| Agent acknowledged task | `task.acknowledge` | *"I can do that."*, *"Be happy to."*, *"Okie dokie."* *(disabled by default)* |
-| Permission needed | `input.required` | *"Hmm?"*, *"What you want?"*, *"Yes?"* |
-| Tool or command error | `task.error` | *"Me not that kind of orc!"*, *"Ugh."* |
-| Rate or token limit hit | `resource.limit` | *"Why not?"* |
-| Rapid prompts (3+ in 10s) | `user.spam` | *"Whaaat?"*, *"Me busy, leave me alone!"*, *"No time for play."* |
+| Session starts | `session.start` | *"The forecast calls for victory!"*, *"Rolling thunder!"* |
+| Task finishes | `task.complete` | *"You've been disrupted."*, *"I hit the kill switch."* |
+| Agent acknowledged task | `task.acknowledge` | *"Storm's coming."*, *"Acknowledged."* *(disabled by default)* |
+| Permission needed | `input.required` | *"What do you need?"*, *"Yes?"* |
+| Tool or command error | `task.error` | *"That's not how electromagnetic fields work."*, *"Ugh."* |
+| Rate or token limit hit | `resource.limit` | *"Overloaded."* |
+| Rapid prompts (3+ in 10s) | `user.spam` | *"I'm a little busy here!"*, *"Too many signals!"* |
 
 Plus **large overlay banners** on every screen (macOS/WSL/MSYS2) and terminal tab titles (`● project: done`) — you'll know something happened even if you're in another app.
 
-peon-ping implements the [Coding Event Sound Pack Specification (CESP)](https://github.com/PeonPing/openpeon) — an open standard for coding event sounds that any agentic IDE can adopt.
+disruptor-ping implements the [Coding Event Sound Pack Specification (CESP)](https://github.com/PeonPing/openpeon) — an open standard for coding event sounds that any agentic IDE can adopt.
 
 ## Quick controls
 
@@ -332,7 +334,7 @@ Pausing mutes sounds and desktop notifications instantly. Persists across sessio
 
 ### Quickstart — `peon setup`
 
-The fastest way to configure peon-ping is the interactive wizard:
+The fastest way to configure disruptor-ping is the interactive wizard:
 
 ```bash
 peon setup
@@ -342,7 +344,7 @@ It walks you through every common setting in one go — press **Enter** at any p
 
 ```
   ╔══════════════════════════════════════╗
-  ║       peon-ping  setup wizard        ║
+  ║     disruptor-ping  setup wizard     ║
   ╚══════════════════════════════════════╝
 
   ── Volume ──
@@ -391,13 +393,13 @@ It walks you through every common setting in one go — press **Enter** at any p
 - **Position** — where notifications appear (top-center, top-right, etc.)
 - **Auto-dismiss** — how long notifications stay visible (`0` = persistent, click to dismiss)
 
-When you're done, the wizard prints a summary and saves everything to `~/.claude/hooks/peon-ping/config.json`. You can rerun `peon setup` anytime to tweak settings — it always shows your current values as defaults.
+When you're done, the wizard prints a summary and saves everything to `~/.claude/hooks/peon-ping/config.json`. You can rerun `peon setup` anytime to tweak settings — it always shows your current values as defaults. (Note: the CLI command is `peon` — this is the upstream CLI name used by both peon-ping and disruptor-ping.)
 
 > **Tip:** All individual `peon` subcommands (`peon volume`, `peon notifications position top-right`, etc.) still work if you prefer scripting or tweaking one setting at a time — see the [Quick controls](#quick-controls) section.
 
 ### Slash commands and manual config
 
-peon-ping also installs slash commands in Claude Code:
+disruptor-ping also installs slash commands in Claude Code:
 
 - `/peon-ping-toggle` — mute/unmute sounds
 - `/peon-ping-config` — change any setting (volume, packs, categories, etc.)
@@ -456,7 +458,7 @@ This means you can:
 - **suppress_idle_prompt_repeats** (boolean, default: `true`): Claude Code re-fires its `idle_prompt` notification every ~60s while the terminal is unfocused. peon-ping routes `idle_prompt` to `task.complete` so you still get a sound when input is needed — but without dedupe the same sound replays on every poke. When `true`, an `idle_prompt` is suppressed if a `task.complete` for the same session already fired inside `idle_prompt_suppress_window_seconds`. Set to `false` to restore the periodic nudge.
 - **idle_prompt_suppress_window_seconds** (number, default: `3600`): Window used by `suppress_idle_prompt_repeats`. After a `task.complete` fires for a session, subsequent `idle_prompt` notifications for that session stay silent for this many seconds. Set to `0` to disable the window (effectively the same as `suppress_idle_prompt_repeats: false`).
 - **suppress_subagent_complete** (boolean, default: `false`): Suppress `task.complete` sounds and notifications when a sub-agent session finishes. When Claude Code's Task tool dispatches parallel sub-agents, each one fires a completion sound — set this to `true` to hear only the parent session's completion sound.
-- **default_pack**: The fallback pack used when no more specific rule applies (default: `"peon"`). Replaces the old `active_pack` key — existing configs are migrated automatically on `peon update`.
+- **default_pack**: The fallback pack used when no more specific rule applies (default: `"disruptor"` in this fork). Replaces the old `active_pack` key — existing configs are migrated automatically on `peon update`.
 - **path_rules**: Array of `{ "pattern": "...", "pack": "..." }` objects. Assigns a pack to sessions based on the working directory using glob matching (`*`, `?`). First matching rule wins. Beats `pack_rotation` and `default_pack`; overridden by `session_override` assignments.
   ```json
   "path_rules": [
@@ -507,7 +509,7 @@ peon-ping resolves which sound pack to use through a 6-layer hierarchy. The firs
 | 3 | **ide_rules** | IDE/source match | `peon packs ide-bind` or `ide_rules` in config |
 | 4 | **pack_rotation** | Random or round-robin from a list | `pack_rotation` array + `pack_rotation_mode` in config |
 | 5 | **default_pack** | Static fallback | `peon packs use <name>` or `default_pack` in config |
-| 6 (lowest) | **hardcoded** | Built-in default | `"peon"` |
+| 6 (lowest) | **hardcoded** | Built-in default | `"disruptor"` (this fork) |
 
 If a layer references a pack that is not installed, it falls through to the next layer.
 If `exclude_dirs` matches the current working directory, the entire invocation is silenced — no sound, no notification.
@@ -603,7 +605,7 @@ peon mobile off
 
 ## Peon Trainer
 
-Your peon is also your personal trainer. Built-in Pavel-style daily exercise mode — the same orc who tells you "work work" now tells you to drop and give him twenty.
+Your Disruptor is also your personal trainer. Built-in Pavel-style daily exercise mode — the Stormcrafter who tells you "You've been disrupted" now commands you to drop and give him twenty. ⚡
 
 ### Quick start
 
@@ -618,7 +620,7 @@ peon trainer status          # check progress
 
 ### How it works
 
-Trainer reminders piggyback on your coding session. When you start a new session, the peon immediately encourages you to start strong with pushups before you write any code. Then every ~20 minutes of active coding, you'll hear the peon yelling at you to do more reps. No background daemon needed. Log your reps with `peon trainer log`, and progress resets automatically at midnight.
+Trainer reminders piggyback on your coding session. When you start a new session, Disruptor immediately encourages you to start strong with pushups before you write any code. Then every ~20 minutes of active coding, you'll hear the Stormcrafter commanding you to do more reps. No background daemon needed. Log your reps with `peon trainer log`, and progress resets automatically at midnight.
 
 ### Commands
 
@@ -665,18 +667,18 @@ In Claude Code, you can log reps without leaving your conversation:
 Drop your own audio files into `~/.claude/hooks/peon-ping/trainer/sounds/`:
 
 ```
-trainer/sounds/session_start/  # session greeting ("Pushups first, code second! Zug zug!")
-trainer/sounds/remind/         # reminder lines ("Something need doing? YES. PUSHUPS.")
-trainer/sounds/log/            # acknowledgment ("Work work! Muscles getting bigger maybe!")
-trainer/sounds/complete/       # celebration ("Zug zug! Human finish all reps!")
-trainer/sounds/slacking/       # disappointment ("Peon very disappointed.")
+trainer/sounds/session_start/  # session greeting ("Rolling thunder! Pushups first, code second!")
+trainer/sounds/remind/         # reminder lines ("The forecast calls for reps. YES. PUSHUPS.")
+trainer/sounds/log/            # acknowledgment ("Storm's building! Muscles getting stronger!")
+trainer/sounds/complete/       # celebration ("You've been disrupted... into shape! All reps done!")
+trainer/sounds/slacking/       # disappointment ("Disruptor is very disappointed.")
 ```
 
 Update `trainer/manifest.json` to register your sound files.
 
 ## MCP server
 
-peon-ping includes an [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server so any MCP-compatible AI agent can play sounds directly via tool calls — no hooks required.
+disruptor-ping includes an [MCP (Model Context Protocol)](https://modelcontextprotocol.io/) server so any MCP-compatible AI agent can play sounds directly via tool calls — no hooks required.
 
 The key difference: **the agent chooses the sound**. Instead of automatically playing a fixed sound on every event, the agent calls `play_sound` with exactly what it wants — `duke_nukem/SonOfABitch` when a build fails, `sc_kerrigan/IReadYou` when reading files.
 
@@ -709,7 +711,7 @@ Requires Node.js 18+. Contributed by [@tag-assistant](https://github.com/tag-ass
 
 ## Multi-IDE Support
 
-peon-ping works with any agentic IDE that supports hooks. Adapters translate IDE-specific events to the [CESP standard](https://github.com/PeonPing/openpeon).
+disruptor-ping works with any agentic IDE that supports hooks. Adapters translate IDE-specific events to the [CESP standard](https://github.com/PeonPing/openpeon).
 
 | IDE | Status | Setup |
 |---|---|---|
@@ -1280,11 +1282,12 @@ Mobile notifications fire on every event regardless of window focus — they're 
 
 ## Sound packs
 
-165 packs across Warcraft, StarCraft, Red Alert, Portal, Zelda, Dota 2, Helldivers 2, Elder Scrolls, and more. The default install includes a curated starter set; commonly used packs include:
+165 packs across Warcraft, StarCraft, Red Alert, Portal, Zelda, Dota 2, Helldivers 2, Elder Scrolls, and more. The default install includes a curated starter set; this fork defaults to the Disruptor pack. Commonly used packs include:
 
 | Pack | Character | Sounds |
 |---|---|---|
-| `peon` (default) | Orc Peon (Warcraft III) | "Ready to work?", "Work, work.", "Okie dokie." |
+| `disruptor` (**default in this fork**) | Disruptor, the Stormcrafter (DOTA 2) | "You've been disrupted", "The forecast calls for victory!", "Rolling thunder!" |
+| `peon` | Orc Peon (Warcraft III) | "Ready to work?", "Work, work.", "Okie dokie." |
 | `peasant` | Human Peasant (Warcraft III) | "Yes, milord?", "Job's done!", "Ready, sir." |
 | `sc_kerrigan` | Sarah Kerrigan (StarCraft) | "I gotcha", "What now?", "Easily amused, huh?" |
 | `sc_battlecruiser` | Battlecruiser (StarCraft) | "Battlecruiser operational", "Make it happen", "Engage" |
@@ -1308,7 +1311,7 @@ Want to add your own pack? See the [full guide at openpeon.com/create](https://o
 
 ## Debugging
 
-When sounds aren't playing or notifications aren't appearing, structured debug logging helps you trace exactly what happened during a hook invocation.
+When sounds aren't playing or notifications aren't appearing, disruptor-ping's structured debug logging helps you trace exactly what happened during a hook invocation.
 
 ### Enabling debug logs
 
@@ -1403,7 +1406,7 @@ powershell -File "$env:USERPROFILE\.claude\hooks\peon-ping\uninstall.ps1" -KeepS
 4. **Notifications** — updates the Terminal tab title and sends a desktop notification if the terminal isn't focused
 5. **Remote routing** — in SSH sessions, devcontainers, and Codespaces, audio and notification requests are forwarded over HTTP to a [relay server](#remote-development-ssh--devcontainers--codespaces) on your local machine
 
-Sound packs are downloaded from the [OpenPeon registry](https://github.com/PeonPing/registry) at install time. The official packs are hosted in [PeonPing/og-packs](https://github.com/PeonPing/og-packs). Sound files are property of their respective publishers (Blizzard, Valve, EA, etc.) and are distributed under fair use for personal notification purposes.
+Sound packs are downloaded from the [OpenPeon registry](https://github.com/PeonPing/registry) at install time. The official packs are hosted in [PeonPing/og-packs](https://github.com/PeonPing/og-packs). disruptor-ping uses the same upstream backend service (peonping.com). Sound files are property of their respective publishers (Blizzard, Valve, EA, etc.) and are distributed under fair use for personal notification purposes.
 
 ## Links
 

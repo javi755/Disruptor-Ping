@@ -1,12 +1,12 @@
 ---
 name: peon-ping-log
-description: Log exercise reps for the Peon Trainer. Use when user says they did pushups, squats, or wants to log reps. Examples - "/peon-ping-log 25 pushups", "/peon-ping-log 30 squats", "log 50 pushups".
+description: Log exercise reps for the disruptor-ping Trainer. Use when user says they did pushups, squats, or wants to log reps. Examples - "/peon-ping-log 25 pushups", "/peon-ping-log 30 squats", "log 50 pushups".
 user_invocable: true
 ---
 
 # peon-ping-log
 
-Log exercise reps for the Peon Trainer.
+Log exercise reps for the disruptor-ping Trainer.
 
 ## Usage
 
@@ -31,7 +31,7 @@ Report the output to the user. The command will print the updated rep count and 
 
 ## If trainer is not enabled
 
-If the output says trainer is not enabled, tell the user to run `/peon-ping-toggle` or `peon trainer on` first.
+If the output says trainer is not enabled, tell the user to run `/peon-ping-toggle` or `peon trainer on` first. (Note: the CLI command remains `peon`.)
 
 ## Check status
 

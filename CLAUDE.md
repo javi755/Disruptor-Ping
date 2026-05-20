@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Developer guide for AI coding agents working on this codebase. For user-facing docs (install, configuration, CLI usage, sound packs, remote dev, mobile notifications), see [README.md](README.md).
+Developer guide for AI coding agents working on this codebase. This is **disruptor-ping**, a Disruptor (DOTA 2) themed fork of peon-ping. For user-facing docs (install, configuration, CLI usage, sound packs, remote dev, mobile notifications), see [README.md](README.md).
 
 ## Commands
 
@@ -40,7 +40,7 @@ See [RELEASING.md](RELEASING.md) for the full release process (version bumps, ta
 
 ## Related Repos
 
-peon-ping is part of the [PeonPing](https://github.com/PeonPing) org:
+disruptor-ping is a fork of peon-ping, which is part of the [PeonPing](https://github.com/PeonPing) org:
 
 | Repo | Purpose |
 |---|---|

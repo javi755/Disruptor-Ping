@@ -1,12 +1,12 @@
 ---
 name: peon-ping-config
-description: Update peon-ping configuration — volume, pack rotation, categories, active pack, and other settings. Use when user wants to change peon-ping settings like volume, enable round-robin, add packs to rotation, toggle sound categories, or adjust any config.
+description: Update disruptor-ping configuration — volume, pack rotation, categories, active pack, and other settings. Use when user wants to change disruptor-ping settings like volume, enable round-robin, add packs to rotation, toggle sound categories, or adjust any config.
 user_invocable: false
 ---
 
 # peon-ping-config
 
-Update peon-ping configuration settings.
+Update disruptor-ping configuration settings.
 
 ## Config location
 

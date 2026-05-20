@@ -1,4 +1,4 @@
-# Contributing to peon-ping
+# Contributing to disruptor-ping
 
 ## Add a new sound pack
 

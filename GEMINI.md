@@ -1,7 +1,7 @@
-# GEMINI.md - peon-ping
+# GEMINI.md - disruptor-ping
 
 ## Project Overview
-`peon-ping` is a cross-platform (macOS, Linux, WSL, Windows) notification system that brings game character voice lines and visual overlay banners to AI coding agents. It helps developers maintain flow by providing audible and visual feedback when an agent completes a task, requires input, or encounters an error.
+`disruptor-ping` is a Disruptor (DOTA 2) themed fork of peon-ping — a cross-platform (macOS, Linux, WSL, Windows) notification system that brings game character voice lines and visual overlay banners to AI coding agents. It helps developers maintain flow by providing audible and visual feedback when an agent completes a task, requires input, or encounters an error. The forecast calls for shipping.
 
 The project implements the [Coding Event Sound Pack Specification (CESP)](https://github.com/PeonPing/openpeon), an open standard for coding event sounds.
 
