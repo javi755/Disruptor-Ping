@@ -1,0 +1,72 @@
+{
+  "cesp_version": "1.0",
+  "name": "disruptor",
+  "display_name": "Disruptor (DOTA 2)",
+  "version": "1.0.0",
+  "description": "Voice lines from Disruptor (the Stormcrafter) from DOTA 2. The forecast calls for shipping.",
+  "author": {
+    "name": "javi755",
+    "github": "javi755"
+  },
+  "license": "custom",
+  "language": "en",
+  "categories": {
+    "session.start": {
+      "sounds": [
+        { "file": "sounds/disruptor_dis_spawn_02.mp3", "label": "The Stormcrafter comes!" },
+        { "file": "sounds/disruptor_dis_spawn_03.mp3", "label": "The days of fair weather are over" },
+        { "file": "sounds/disruptor_dis_spawn_04.mp3", "label": "War is an equation, death the solution" }
+      ]
+    },
+    "task.acknowledge": {
+      "sounds": [
+        { "file": "sounds/disruptor_dis_move_04.mp3", "label": "Advance" },
+        { "file": "sounds/disruptor_dis_move_08.mp3", "label": "Faster!" },
+        { "file": "sounds/disruptor_dis_move_09.mp3", "label": "Come now" },
+        { "file": "sounds/disruptor_dis_move_12.mp3", "label": "Rolling thunder!" },
+        { "file": "sounds/disruptor_dis_cast_01.mp3", "label": "Spell cast" }
+      ]
+    },
+    "task.complete": {
+      "sounds": [
+        { "file": "sounds/disruptor_dis_kill_01.mp3", "label": "Did I interrupt you?" },
+        { "file": "sounds/disruptor_dis_kill_07.mp3", "label": "Caught you dead to rights" },
+        { "file": "sounds/disruptor_dis_kill_08.mp3", "label": "I hit the kill switch" },
+        { "file": "sounds/disruptor_dis_kill_09.mp3", "label": "I forecast your demise" },
+        { "file": "sounds/disruptor_dis_kill_10.mp3", "label": "You've been disrupted" },
+        { "file": "sounds/disruptor_dis_win_02.mp3", "label": "Victory!" },
+        { "file": "sounds/disruptor_dis_win_05.mp3", "label": "The forecast calls for victory!" }
+      ]
+    },
+    "task.error": {
+      "sounds": [
+        { "file": "sounds/disruptor_dis_death_08.mp3", "label": "My coil runs down" },
+        { "file": "sounds/disruptor_dis_death_09.mp3", "label": "Lost my spark" },
+        { "file": "sounds/disruptor_dis_death_11.mp3", "label": "Wait, what? I'm dead?" },
+        { "file": "sounds/disruptor_dis_death_12.mp3", "label": "I reap the storm I've sown" },
+        { "file": "sounds/disruptor_dis_death_13.mp3", "label": "Under the weather" }
+      ]
+    },
+    "input.required": {
+      "sounds": [
+        { "file": "sounds/disruptor_dis_notyet_01.mp3", "label": "Not yet" },
+        { "file": "sounds/disruptor_dis_notyet_04.mp3", "label": "I'm not ready" },
+        { "file": "sounds/disruptor_dis_notyet_07.mp3", "label": "It's not time yet" }
+      ]
+    },
+    "resource.limit": {
+      "sounds": [
+        { "file": "sounds/disruptor_dis_nomana_01.mp3", "label": "Out of mana" },
+        { "file": "sounds/disruptor_dis_nomana_04.mp3", "label": "No mana" },
+        { "file": "sounds/disruptor_dis_nomana_07.mp3", "label": "Not enough mana" }
+      ]
+    },
+    "user.spam": {
+      "sounds": [
+        { "file": "sounds/disruptor_dis_anger_01.mp3", "label": "Anger" },
+        { "file": "sounds/disruptor_dis_anger_04.mp3", "label": "Anger" },
+        { "file": "sounds/disruptor_dis_anger_07.mp3", "label": "Anger" }
+      ]
+    }
+  }
+}
